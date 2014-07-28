@@ -1,0 +1,26 @@
+.rot-knob{background-image:url(../img/range.png); pointer-events: none; opacity: 0.7;}
+.rot-knobon{background-image:url(../img/range.png);}
+
+.black{background-image:url(../img/Knob1.png); pointer-events: none; opacity: 0.7; }
+.blackon{background-image:url(../img/Knob1.png); }
+
+.inf-knob{background-image:url(../img/dial5.png); pointer-events: none; opacity: 0.7;}
+.inf-knobon{background-image:url(../img/dial5.png);}
+
+
+.circle{background-image:url(../img/circle.png);}
+
+.rot-knob-base{margin:0 auto;}
+
+
+
+.knob-swarm-container{width:300px;float:left;}
+
+.knob-swarm-description{margin-left:350px;}
+
+h2{clear:both;}.knob-description{margin-left:150px;}
+
+.knob-values{width:50px;text-align:center;border:0;/*-moz-user-select:none;-webkit-user-select:none;user-select:none;-ms-user-select:none;*/}
+
+pre{border:1px solid orange;padding:10px;background-color:lightYellow;}
+

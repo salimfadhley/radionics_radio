@@ -1,0 +1,7 @@
+.knob1{background-image:url(../img/blackgear2.png);}
+
+.oscillator{float:left;padding:20px;background-color:lightBlue;margin:10px;text-align:center;}
+
+.rot-knob-base{margin:10px auto;}
+
+.oscillator span{background-color:rgba(255,255,255,0.4);padding:3px 10px;margin:5px;border-radius:10px;border:1px solid white;}

@@ -1,0 +1,308 @@
+<!--
+Filename: index.html
+Project: RADIONICS RADIO
+Type: html
+Author: SALVO NOSTRATO
+Initial Version: April 2014
+
+© Salvo Nostrato 2014 
+
+Changelog:
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <html>
+        
+        <head>
+            <title>Radionics Radio</title>
+            <meta content="text/html; charset=UTF-8" />
+            <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+            <meta property="og:title" content="RADIONICS RADIO" />
+            <meta property="og:site_name" content="RADIONICS RADIO" />
+            <meta name="description" content="A thought-to-frequency converter based on Delawarr Laboratories' radionics equipment of the 1960s.  Sends your thoughts as frequency numbers for broadcast on Resonance 104.4FM's Radionics Radio." />
+            <meta property="og:description" content="A thought-to-frequency converter based on Delawarr Laboratories' radionics equipment of the 1960s.  Sends your thoughts as frequency numbers for broadcast on Resonance 104.4FM's Radionics Radio." />
+            <meta property="og:image" content="http://salvonostrato.com//radionics/radionicsfull/img/image.png" />
+            <meta property="og:image:type" content="image/png" />
+            <meta property="og:image:width" content="1024" />
+            <meta property="og:image:height" content="1024" />
+            
+            
+            
+            <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+            
+            <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="css/knobRot.css" />
+            
+            <link rel="stylesheet" type="text/css" href="css/tipsy.css" />
+            
+   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+   <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+   <script type="text/javascript" src="js/jquery.js"></script>
+   <script src="js/jquery.easing.1.3.js"></script>
+
+   <script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/nexp/dok9v=dccf16c0cc/appsh.min.js"></script>
+   <script type="text/javascript">__CF.AJS.inith();</script>
+
+
+
+   <script src="http://salvonostrato.com//web/universal-js/jquery.knob.js"></script>
+   <script type="text/javascript" src="js/shared.js"></script>
+   <script type="text/javascript" src="js/knobRot-0.2.3.min.js"></script>
+   <script type="text/javascript" src="js/pace.min.js"></script>
+
+
+
+<script type="text/javascript" src="js/controls.js"></script>
+<script type="text/javascript" src="js/infknob.js"></script>
+<script type="text/javascript" src="js/knobs.js"></script>
+        <!--<script type="text/javascript" src="js/OSC.js"></script>-->
+<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/detection.js"></script> 
+<script type="text/javascript" src="js/cssdetection.js"></script>            <!---->
+        </head>
+        
+        
+                <script>
+        
+    var audio_context, oscillator;  
+        
+        
+    function stop() {
+    oscillator.noteOff(0);
+    console.log("stop");
+    }
+     
+    function play(freq) {
+    
+    oscillator = audio_context.createOscillator();
+    gainNode = audio_context.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audio_context.destination);
+    
+    gainNode.gain.value = 0.5;
+    oscillator.frequency.value = freq;
+    oscillator.noteOn(0);
+    
+    
+    
+    console.log("play");
+    }    
+    
+
+
+  (function init(g){
+    try {
+      audio_context = new (g.AudioContext || g.webkitAudioContext);
+      oscillator = audio_context.createOscillator();
+    } catch (e) {
+      alert('No web audio oscillator support in this browser');
+    }
+  }(window));
+  
+
+/*  
+  $(function(){
+	  
+	 
+	  
+	  $(".demo").click(function () {
+	        console.log($("#freqmain").val() - " Hz");
+	  document.getElementById('inf-knob').value = 300;
+            console.log($('#inf-knob').val());
+	  
+	  
+  });});
+  
+  */
+  </script>
+
+
+        
+        <body>
+
+      <div id="help3"><b>INSTRUCTIONS</b>
+
+            </div>
+            <div id="container-thankyou">
+                
+<h3 style="position:relative;top:-10px; color:white;padding-top:70px;"><center>RADIONICS RADIO</center></h3>
+
+                <br>
+                
+<h4 style="position:relative;top:-10px; color:white;"><center>Thank you for your submission of frequencies</center></h4>
+
+<a href="index.html"><center><input type="submit" name="submit" id="return" value="Return to Radionics"></center></a>
+
+                <br>
+                <div id="help"><b>INSTRUCTIONS</b>
+
+                </div>
+            </div>
+            </div>
+            <div id="container-help">
+                
+<h3 style="position:relative;top:-10px; color:white;"><center>RADIONICS RADIO</center></h3>
+
+                <br>
+                
+<h5 style="position:relative;top:-50px; color:white;">Using this 21st century reworking of Delawarr Laboratories' radionics oscillator equipment, users can identify a run of frequencies relating to any thought or concept of their choice.  It is alleged to work by the power of the mind.<br>
+<br>
+<big style="font-size:12px; color: #FEF0C9;">
+1. Type your chosen thought into the Thought Box<br><br>
+2. Turn on the radionics machine by clicking once on the on/off dial<br><br>
+3. Orientate the start frequency by sweeping the large frequency dial down to zero Hertz.<br><br>
+4. To enter the radionic searching mode, press the '1' key on the keyboard.  This locks the cursor into a delicate frequency control mode.  (Pressing '2' exits this mode).</big><br>
+<br>
+This is where things get strange.  Now it is time to begin searching for frequencies that 'resonate' with the item in the Thought Box.  This is achieved by pressing '1' (notice the circle appears around the Thought Box) and then slowly rubbing your finger in a circular motion on your trackpad or touchscreen, moving the cursor AROUND the Thought Box - following the circle.  When you feel a slight friction or physical 'stick' or a 'slip' between your finger and the touch surface, it indicates the frequency corresponds to the thought.<br>
+<br>
+<big style="font-size:12px; color: #FEF0C9;">
+5. In frequency search mode, move the cursor clockwise to increase the frequency, or anti-clockwise to decrease by simply moving the cursor around the Thought Box (do not click!)<br><br>
+6. The low frequencies (from 0 Hz to 150 Hz) are barely audible on some speakers.  Keep moving the cursor clockwise around the Thought Box until a 'stick' is felt.  A finger stick can happen on any frequency, audible or inaudible.<br><br>
+7. Click the mouse when a stick is felt.  This stores the current frequency into one of six boxes.  This also exits the mode.  Press '1' again to resume frequency searching until all six boxes are filled with numbers in the same way.<br><br>
+8. You can go back and change any stored number by manually exiting the searching mode (by pressing '2') and manually selecting a box by clicking the button next to the chosen box.<br><br>
+9. The main controls on the application are only active in normal mode.  Controls include a volume dial (lower left) and a frequency range selector (below the big frequency dial). The big frequency dial is a broad control to select starting frequencies for the searching mode.<br><br>
+10. When all the frequencies are ready, click 'SEND ALL' to send your chosen thought and its six main frequencies to Radionics Radio for broadcast on Resonance 104.4FM (and don't forget to supply a username!)
+</big>
+</h5>
+
+                <center>
+                    <div id="exit" style="color:white; position:relative;top:-40px;left:0px; cursor: crosshair; width:80px; font-size:13px;">EXIT</div>
+                </center>
+                <br>
+            </div>
+            </div>
+            <div id="container-send">
+                
+<h3 style="position:relative;top:-10px; color:white;"><center>RADIONICS RADIO</center></h3>
+
+                <br>
+                <form method="POST" name="contactform" action="contact-form-handler.php">
+                    <center>
+                        <textarea id="username" rows="1" cols="1" name="usrname" style="position:relative;left:0px;top:-25px;width:170px;height: 30px;font-size: 16px;color:white; background-color: rgba(196,196,196,0.14); border:0px;">Username</textarea>
+                    </center>
+                    <center>
+                        <input type="submit" name="submit" id="sendall" value="SEND ALL">
+                    </center>
+                    <center>
+                        <div id="close" style="color:white; position:relative;top:-42px;left:50px; cursor: crosshair; width:80px;">CANCEL</div>
+                    </center>
+                    <div id="values" style="position:relative; top:-30px;">
+                        <input type="text" style="position:relative;top:10px;left:0px; color:white; background-color:transparent; border: 0px; font-size:14px;" value="Thought: ">
+                        <input type="text" style="position:relative;top:80px; left:-150px; color:white; background-color:transparent; border: 0px; font-size:14px;" value="Frequencies: ">
+                        <textarea id="tought" rows="1" cols="1" name="toughtbox" style="position:relative;left:0px;top:10px;width:395px;height: 40px;font-size: 14px;" readonly>Thought:</textarea>
+                        <textarea id="frequencies" rows="1" cols="1" name="frequencies" style="position:relative;left:0px;top:30px;width:395px;height: 40px;font-size: 14px;" readonly>Frequencies:</textarea>
+                </form>
+                <div id="help2"><b>INSTRUCTIONS</b>
+
+                </div>
+                </div>
+            </div>
+            <!MainContainer><div id="container">
+
+<div class="light"></div>
+
+<div><textarea rows="1" cols="1" id="box-thought">  THOUGHT BOX</textarea></div>
+
+
+<div class="knob-container0">
+
+<input type="text" value="0.1" id="inf-knob" class="knob-values">
+</div>
+<div class="knob-container01">
+
+<input type="text" value="0" id="inf-knob1" class="knob-values">
+</div>
+<div class="knob-container02">
+
+<input type="text" value="0" id="inf-knob2" class="knob-values">
+</div>
+<div class="knob-container03">
+
+<input type="text" value="0" id="inf-knob3" class="knob-values">
+</div>
+
+
+
+
+
+
+
+
+<input type="text" id="freqmain"  value="50.0 Hz" min="0" readonly>
+<input type="text" id="freqmain2"  value="50" readonly>
+
+
+<div id="circle"></div>
+
+<div class="knob-container2">
+<input type="text" value="0" id="range-knob" class="knob-values">
+</div>
+
+<div class="knob-container1">
+<input type="text" value="0.5" id="black-knob" class="knob-values">
+</div>
+
+<input type="text" id="start" readonly></button>
+
+ <div id="frequency-chart" class="frequency-chart">  
+ 
+ <input type="text" class="freqbox" id="freqbox"  data-clicked="1" value="       1 = 0.0 Hz  +" readonly ><br>
+ <input type="text" class="freqbox" id="freqbox1" data-clicked="2" value="       2 = 0.0 Hz  +" readonly ><br>
+ <input type="text" class="freqbox" id="freqbox2" data-clicked="3" value="       3 = 0.0 Hz  +" readonly ><br>
+ <input type="text" class="freqbox" id="freqbox3" data-clicked="4" value="       4 = 0.0 Hz  +" readonly ><br>
+ <input type="text" class="freqbox" id="freqbox4" data-clicked="5" value="       5 = 0.0 Hz  +" readonly ><br>
+ <input type="text" class="freqbox" id="freqbox5" data-clicked="6" value="       6 = 0.0 Hz  +" readonly ><br>
+ 
+
+ <input id="send" type="image" src="img/send.png" alt="Submit" align="right" width="130" height="25">
+ </div>
+
+
+<div class="demo">
+   
+    <input id="infinite" class="infinite" value="0" data-width="2000" data-height="2000" data-thickness="1" data-fgColor="#AAAAAA" data-bgColor="#ABA" data-displayInput="false" data-step="0.1" data-cursor="true" data-min="0" data-max="1000"/></div>
+    
+    <div id="container-dial">
+    <div id="dial1"></div>
+
+<canvas name="dialcan" id="dialcan" height="520" width="600"></canvas>
+
+
+</div><!--container-dial ENDS-->
+            <!PopUpWindow><div id="container-start">
+
+<div id="Title-StartWindow"><h2>RADIONICS RADIO</h2><div>
+
+<div id="Links-StartWindow" style="position:relative; top:5px;">
+<p><h4 style="position:relative; top:30px; font-size:13px;"><a href="http://resonancefm.com" target="_blank"> RESONANCE 104.4 FM</a></h4>
+<h4 style="position:relative; top:20px;font-size:13px;"><a href="http://miraculousagitations.com" target="_blank"> DANIEL R. WILSON</a></h4>
+<h4 style="position:relative; top:10px;font-size:13px;"><a href="http://miraculousagitations.com/radionics-radio-blog/" target="_blank"> Radionics Radio Blog</a></h4></p>
+<div><!Links-StartWindow-End>
+
+<input id="start-button" class="frequency" type="button">
+
+<p><div id="main-start"><h5>START</h5></div></p>
+<p><div id="salvo-link"><h6>Designed & Developed by <a href="http://salvonostrato.com" target="_blank"> Salvo Nostrato </a>
+<br>&copy; Radionics Radio 2014</h6></div></p>
+
+
+
+<div id="info" style="font-size:20px;top:-320px; left:127px;"><b>INSTRUCTIONS</b><div> 
+
+</div>
+
+</div><!PopUpWindow-End>
+
+
+
+</div><!MainContainer-End>
+
+
+
+
+
+ </body>
+</html>

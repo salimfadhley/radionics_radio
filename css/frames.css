@@ -1,0 +1,111 @@
+body {background: black; overflow: hidden;}
+
+#allframes {position: relative; left: 50%;
+  margin-top: 0px;
+  margin-left: -500px;}
+
+#divframe1{
+   
+    position:relative;
+    overflow:hidden;
+    height:393px;
+    width:495px;
+    
+}
+
+#frame1 {position: absolute; width: 1000px; height: 800px;top:-91px;
+    left:-211px; transform: scale(50%);
+    	
+    	-ms-zoom: 0.75;
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.75);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.80);
+        -webkit-transform-origin: 0 0; }
+        
+#divframe2{
+   
+    position:relative;
+    overflow:hidden;
+    height:393px;
+    width:495px;
+    
+}
+
+#frame2 {position: absolute; width: 1000px; height: 800px;top:-91px;
+    left:-211px; transform: scale(50%);
+    	
+    	-ms-zoom: 0.75;
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.75);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.80);
+        -webkit-transform-origin: 0 0; }        
+        
+#divframe3{
+   
+    position:relative;
+    overflow:hidden;
+    height:393px;
+    width:495px;
+    top: -786px;
+    left: 496px;
+    
+}
+
+#frame3 {position: absolute; width: 1000px; height: 800px;top:-91px;
+    left:-211px; transform: scale(50%);
+    	
+    	-ms-zoom: 0.75;
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.75);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.80);
+        -webkit-transform-origin: 0 0; }  
+        
+#divframe4{
+   
+    position:relative;
+    overflow:hidden;
+    height:393px;
+    width:495px;
+    top: -786px;
+    left: 496px;
+    
+}
+
+#frame4 {position: absolute; width: 1000px; height: 800px;top:-91px;
+    left:-211px; transform: scale(50%);
+    	
+    	-ms-zoom: 0.75;
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.75);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.80);
+        -webkit-transform-origin: 0 0; }                 
+        
+#divframe5{
+   
+    position:relative;
+    overflow:hidden;
+    height:393px;
+    width:495px;
+    top: -786px;
+    left: 992px;
+    
+}
+
+#frame5 {position: absolute; width: 1000px; height: 800px;top:-91px;
+    left:-211px; transform: scale(50%);
+    	
+    	-ms-zoom: 0.75;
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.75);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.80);
+        -webkit-transform-origin: 0 0; }                 

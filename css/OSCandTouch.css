@@ -1,0 +1,24 @@
+     
+           
+            div.demo > p {
+                font-size: 20px
+            }
+
+
+label {-webkit-appearance: none;
+  
+  
+  border-radius: 15px;
+  border: 1px solid #5a5a5a;
+  padding: 0 3px; top:350px; left:100px; position:fixed;
+}
+
+#dialog {background-color:black;  color:white;   }
+
+.ui-dialog-titlebar {background:black;  color:white;   }
+
+.ui-button-icon-primary.ui-icon.ui-icon-closethick {top:0px; left:0px;}
+
+.demo{pointer-events: auto; opacity:0.7; left:260px;top:-250px; position:relative; width: 50px; }
+#freq {position:fixed; top:300px; left:60px;}
+#freqtot {position:fixed; top:348px; left:300px;}
